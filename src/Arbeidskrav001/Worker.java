@@ -1,3 +1,8 @@
+/*
+    * This class basically works to pass through information to
+    * the specified types of workers, and do basic things as
+    * calculating pay.
+ */
 package Arbeidskrav001;
 
 public class Worker {

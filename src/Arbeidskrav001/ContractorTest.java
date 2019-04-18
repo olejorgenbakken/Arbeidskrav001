@@ -1,8 +1,5 @@
 /*
-    * This is my simple implementation of the creation of a
-    * project and costs of it...
-    *
-    * I'm sorry.
+    * This is my answer to the exercise 001 in PGR103
  */
 
 package Arbeidskrav001;
