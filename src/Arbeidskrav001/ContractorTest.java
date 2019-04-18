@@ -1,47 +1,22 @@
 /*
-    * This is my answer to the exercise 001 in PGR103
+    * Here is the main method of this answer.
  */
 
 package Arbeidskrav001;
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class ContractorTest {
-    private ArrayList<Worker> workers = new ArrayList<>();
-    private String projectName, customer;
-    private Address projectAddress;
-    private double overheadPercent;
-    private LocalDate startDate, endDate;
-
-    private ContractorTest(String projectName, String customer, Address projectAddress,
-                          LocalDate startDate, LocalDate endDate, double overheadPercent) {
-        this.projectName = projectName;
-        this.customer = customer;
-        this.projectAddress = projectAddress;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.overheadPercent = overheadPercent;
-    }
-
-    private ContractorTest(String projectName, String customer, Address projectAddress,
-                          double overheadPercent) {
-        this.projectName = projectName;
-        this.customer = customer;
-        this.projectAddress = projectAddress;
-        this.overheadPercent = overheadPercent;
-    }
-
     public static void main(String[] args) {
         Address customer1 = new Address("Uglevegen 17", "0572", "Oslo", "Norge");
         Address customer2 = new Address("Sinsenveien 14", "0572", "Oslo", "Norge");
 
         LocalDate start1 = LocalDate.parse("2019-04-18");
         LocalDate end1 = LocalDate.parse("2021-04-18");
-        ContractorTest p1 = new ContractorTest("Snøhetta office", "Snøhetta",
+        Project p1 = new Project("Snøhetta office", "Snøhetta",
                 customer1, start1, end1, .22);
         LocalDate start2  = LocalDate.parse("2019-09-19");
         LocalDate end2 = LocalDate.parse("2019-12-24");
-        ContractorTest p2 = new ContractorTest("Garage", "Ole Jørgen Bakken",
+        Project p2 = new Project("Garage", "Ole Jørgen Bakken",
                 customer2, start2, end2, .15);
 
         Address electricianAddress = new Address("Uglevegen 17", "Sinsenveien 14", "2640", "Vinstra", "Norge");
