@@ -47,7 +47,7 @@ public class ContractorTest {
         ContractorTest p2 = new ContractorTest("Garage", "Ole Jørgen Bakken",
                 customer2, start2, end2, .15);
 
-        Address electricianAddress = new Address("Uglevegen 17", "2640", "Vinstra", "Norge");
+        Address electricianAddress = new Address("Uglevegen 17", "Sinsenveien 14", "2640", "Vinstra", "Norge");
         Address carpenterAddress = new Address("Ingensteds 69", "420", "Oslo", "Norge");
         Address plumberAddress = new Address("Himmelen 12", "69", "Himmel", "Himmelen");
 
@@ -70,27 +70,48 @@ public class ContractorTest {
         e.setWiringCosts(6000);
         c.setLumberCosts(4000);
 
-        System.out.println("The project \"" + p1.projectName + "\" is scheduled to start on the " + p1.startDate + ", and end on the " + p1.endDate + ".");
-        System.out.println("The cost breakdown is calculated to look like this:");
-        System.out.println("\n" + "Carpenter (" + (c.firstName) + " " + (c.lastName) + ") cost, including lumber:");
-        System.out.println((c).calculatePay() + "\n");
-        System.out.println("Electrician (" + (e.firstName) + " " + (e.lastName) + ") cost, including wiring:");
-        System.out.println((e).calculatePay() + "\n");
-        System.out.println("Plumber (" + (p.firstName) + " " + (p.lastName) + ") cost, including plumbing materials:");
-        System.out.println((p).calculatePay() + "\n");
-        System.out.println("Which comes to a total of:");
-        System.out.print(((e).calculatePay() + (p).calculatePay() + (c).calculatePay()) * p1.overheadPercent + "kr" + "\n");
-        System.out.print("\n" + "*************************************" + "\n");
+        System.out.println("The project \"" + p1.projectName + "\" is scheduled to start on the " + p1.startDate + ", and end on the " + p1.endDate + ". \n");
 
-        System.out.println("The project \"" + p2.projectName + "\" is scheduled to start on the " + p2.startDate + ", and end on the " + p2.endDate + ".");
-        System.out.println("The cost breakdown is calculated to look like this:");
-        System.out.println("\n" + "Carpenter (" + (c.firstName) + " " + (c.lastName) + ") cost, including lumber:");
-        System.out.println((c).calculatePay() + "\n");
-        System.out.println("Electrician (" + (e.firstName) + " " + (e.lastName) + ") cost, including wiring:");
-        System.out.println((e).calculatePay() + "\n");
+        System.out.println("************************************************" + "\n");
+
+        System.out.println(c.work() + " done by: \"" + c.firstName + " " + c.lastName + ".");
+        System.out.println("Address info: "+ c.address + "\n");
+
+        System.out.println(e.work() + " done by: \"" + e.firstName + " " + e.lastName + ".");
+        System.out.println("Address info: "+ e.address + "\n");
+
+        System.out.println(p.work() + " done by: \"" + p.firstName + " " + p.lastName + ".");
+        System.out.println("Address info: "+ p.address + "\n");
+
+        System.out.println("************************************************" + "\n");
+
+        System.out.println("The cost breakdown is calculated to look like this: \n");
+        System.out.print(c.toString());
+        System.out.print(e.toString());
+        System.out.println(p.toString());
         System.out.println("Which comes to a total of:");
-        System.out.print(((e).calculatePay() + (c).calculatePay()) * p2.overheadPercent + "kr" + "\n");
-        System.out.print("\n" + "*************************************");
+        System.out.print(((e).calculatePay() + (p).calculatePay() + (c).calculatePay()) * p1.overheadPercent + "kr with an "
+                + p1.overheadPercent + " overhead percent" + "\n");
+        System.out.println("\n" + "*************************************" + "\n");
+
+        System.out.println("The project \"" + p2.projectName + "\" is scheduled to start on the " + p2.startDate + ", and end on the " + p2.endDate + ". \n");
+
+        System.out.println("************************************************" + "\n");
+
+        System.out.println(c.work() + " done by: \"" + c.firstName + " " + c.lastName + ".");
+        System.out.println("Address info: "+ c.address + "\n");
+
+        System.out.println(e.work() + " done by: \"" + e.firstName + " " + e.lastName + ".");
+        System.out.println("Address info: "+ e.address + "\n");
+
+        System.out.println("************************************************" + "\n");
+
+        System.out.println("The cost breakdown is calculated to look like this: \n");
+        System.out.print(c.toString());
+        System.out.print(e.toString() + "\n");
+        System.out.println("Which comes to a total of:");
+        System.out.print(((e).calculatePay() + (c).calculatePay()) * p2.overheadPercent + "kr with an "
+                + p2.overheadPercent + " overhead percent" + "\n");
     }
 
 }

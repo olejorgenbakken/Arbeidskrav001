@@ -1,7 +1,7 @@
 /*
-    * The code used in this class will presume that
-    * if the user has two street addresses they're still in the same zip-
-    * code. Although this is improbable it makes it easier.
+    * There's a control for if a person has two registered street addresses.
+    * The code used in this class will presume that if the user has two street
+    * addresses they're still in the same zip code.
  */
 package Arbeidskrav001;
 
@@ -24,10 +24,10 @@ public class Address {
     }
 
     public String toString() {
-        if (street2 != null) {
+        if (street2 == null || street2.length() == 0) {
             return street1 + ", " + zip + " " + city + ", " + state;
         } else {
-            return street1 + "\n" + street2 + ", " + zip + " " + city + ", " + state;
+            return street1 + " / " + street2 + ", " + zip + " " + city + ", " + state;
         }
     }
 }
