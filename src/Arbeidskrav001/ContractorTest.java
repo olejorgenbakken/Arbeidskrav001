@@ -7,8 +7,8 @@ import java.time.LocalDate;
 
 public class ContractorTest {
     public static void main(String[] args) {
-        Address customer1 = new Address("Uglevegen 17", "0572", "Oslo", "Norge");
-        Address customer2 = new Address("Sinsenveien 14", "0572", "Oslo", "Norge");
+        Address customer1 = new Address("Hovedveien 3", "0542", "Oslo", "Norge");
+        Address customer2 = new Address("Delta 7", "0575", "Oslo", "Norge");
 
         LocalDate start1 = LocalDate.parse("2019-04-18");
         LocalDate end1 = LocalDate.parse("2021-04-18");
@@ -19,7 +19,7 @@ public class ContractorTest {
         Project p2 = new Project("Garage", "Ole Jørgen Bakken",
                 customer2, start2, end2, .15);
 
-        Address electricianAddress = new Address("Uglevegen 17", "Sinsenveien 14", "2640", "Vinstra", "Norge");
+        Address electricianAddress = new Address("Ekornveien 11", "Øyafestivalen", "2110", "Oslo", "Norge");
         Address carpenterAddress = new Address("Ingensteds 69", "420", "Oslo", "Norge");
         Address plumberAddress = new Address("Himmelen 12", "69", "Himmel", "Himmelen");
 
